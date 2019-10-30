@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgba(194, 222, 237, 0.5);
+}
+
+#main {
+    position: relative;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    margin: 10px 0;
+    border: 1px solid red;
+    color: white;
+}
+
+.nav-item {
+    border: 1px solid green;
+    flex: 1;
+    text-align: center;
+    color: black;
+}
+
+a {
+    text-decoration: none;
+}
+
+.nav-item:hover {
+    color: white;
+    background-color: grey;
+    filter: brightness(0.85);
+}
+
+#home-img {
+    width: 20px;
+    margin-right: 10px;
+}
+
+header {
+    background-image: url("/imgs/logo3.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    border: 5px solid grey;
+    position: relative;
+}
+
+header h1 {
+    position: relative;
+    top: 100px;
+    color: white;
+    text-align: center;
+}
+
+header h3 {
+    position: relative;
+    top: 125px;
+    text-align: center;
+    color: whitesmoke;
+}
+
+#aboutme {
+    border: 1px solid black;
+}
+
+#aboutme-container {
+    display: grid;
+    margin: 10px 30px;
+    gap: 50px;
+}
+
+#skills {
+    border: 1px solid black;
+}
+
+#skills-container {
+    display: flex;
+    margin: 10px 30px;
+    gap: 50px;
+}
+
+#skills-container img {
+    width: 50px;
+}
+
+#portfolio {
+    border: 1px solid black;
+}
+
+#portfolio-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    border: 1px solid orange;
+    justify-items: center;
+    align-items: center;
+}
+
+.portfolio-item {
+    border: 1px solid yellow;
+}
+
+.portfolio-img {
+    width: 300px;
+    height: auto;
+}
+
+#contact {
+    border: 1px solid black;
+}
+
+#contact-container {
+    display:flex;
+    justify-content:space-between;
+    margin: 0 10px;
+}
+
+#contact-form {
+    display:grid;
+    gap:20px;
+    border: 1px solid green;
+}
+
+/* Mobile Styles */
+@media only screen and (max-width: 400px) {
+    h1 {
+        color: yellow !important;
+    }
+}
+
+/* Tablet Styles */
+@media only screen and (min-width: 401px) and (max-width: 960px) {
+    h1 {
+        color: pink;
+    }
+}
+
+/* Desktop Styles */
+@media only screen and (min-width: 961px) {}
