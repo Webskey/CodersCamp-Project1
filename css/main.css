@@ -3,31 +3,46 @@
     padding: 0;
 }
 
+:root {
+    --bckgrnd: rgb(105, 127, 140);
+    --borders: rgb(61, 74, 82);
+    --font-clr: rgb(215, 235, 247);
+    --font-clr2: rgb(189, 206, 217);
+}
+
 body {
-    background-color: rgba(194, 222, 237, 0.5);
+    background-color: var(--bckgrnd);
+    color: var(--font-clr2);
+    font-family: 'Rubik', sans-serif;
 }
 
-#main {
-    position: relative;
+main>* {
+    margin-bottom: 20px;
 }
 
-.container {
+/* ---=== NAVIGATION BAR ===--- */
+nav {
+    z-index: 1;
+    position: fixed;
+    left: 0;
+    right: 0;
     display: flex;
-    justify-content: space-around;
-    margin: 10px 0;
-    border: 1px solid red;
-    color: white;
 }
 
 .nav-item {
-    border: 1px solid green;
-    flex: 1;
+    flex: 1 1 70px;
+    padding: 10px;
+    color: var(--font-clr);
+    background-color: var(--borders);
+    text-decoration: none;
     text-align: center;
-    color: black;
+    font-weight: bold;
+    letter-spacing: 1px;
+    border-bottom: 2px groove rgba(0, 0, 0, .7);
 }
 
-a {
-    text-decoration: none;
+nav a:not(:last-child) {
+    border-right: 2px groove rgba(0, 0, 0, .7);
 }
 
 .nav-item:hover {
@@ -36,57 +51,105 @@ a {
     filter: brightness(0.85);
 }
 
-#home-img {
-    width: 20px;
-    margin-right: 10px;
-}
+/* ---=== HEADER SECTION ===--- */
 
 header {
     background-image: url("/imgs/logo3.jpg");
     background-size: cover;
     background-position: center;
     height: 300px;
-    border: 5px solid grey;
-    position: relative;
 }
 
 header h1 {
     position: relative;
-    top: 100px;
-    color: white;
+    top: 80px;
+    text-shadow: 0px 0px 10px black, 0 0 25px grey;
     text-align: center;
+    font-size: 5rem;
 }
 
 header h3 {
     position: relative;
-    top: 125px;
+    top: 100px;
     text-align: center;
-    color: whitesmoke;
+    text-shadow: 0 0 3px black, 0 0 5px var(--bckgrnd), 0 0 7px var(--borders);
+    font-size: 2.5rem;
 }
+
+/* ---=== ABOUT ME SECTION ===--- */
 
 #aboutme {
     border: 1px solid black;
 }
 
 #aboutme-container {
+    width: 80%;
+    margin: auto;
     display: grid;
-    margin: 10px 30px;
-    gap: 50px;
+    grid-template-areas: "table info";
+    column-gap: 50px;
+    row-gap: 20px;
+    align-items: start;
+    justify-items: center;
+    margin: 30px auto;
 }
+
+#aboutme-container p {
+    grid-area: info;
+    text-align: justify;
+    text-align-last: center;
+    hyphens: auto;
+}
+
+#aboutme-container table {
+    text-align: left;
+    grid-area: table;
+}
+
+.aboutme-item td {
+    padding: 5px;
+}
+
+/* ---=== SKILLS SECTION ===--- */
 
 #skills {
     border: 1px solid black;
 }
 
 #skills-container {
-    display: flex;
-    margin: 10px 30px;
-    gap: 50px;
+    margin: 20px auto;
+    display: grid;
+    grid-template: 1fr / repeat(4, 1fr);
 }
 
-#skills-container img {
-    width: 50px;
+.skills-item {
+    padding: 5px;
+    text-align: center;
 }
+
+.skills-item img {
+    display: block;
+    margin: auto;
+    min-width: 100px;
+    width: 70%;
+    max-width: 200px;
+    opacity: 0.3;
+    filter: invert(100%);
+    border-radius: 7.5%;
+}
+
+.skills-item figcaption {
+    padding: 10px;
+    font-size: 1.7rem;
+    font-weight: bold;
+}
+
+.skills-item ul li {
+    list-style-type: none;
+    padding-bottom: 5px;
+}
+
+/* ---=== PORTFOLIO SECTION ===--- */
 
 #portfolio {
     border: 1px solid black;
@@ -94,48 +157,117 @@ header h3 {
 
 #portfolio-container {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    border: 1px solid orange;
+    grid-template: 200px 200px / 1fr 2fr 1fr;
     justify-items: center;
     align-items: center;
 }
 
-.portfolio-item {
-    border: 1px solid yellow;
+.portfolio-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
-.portfolio-img {
-    width: 300px;
-    height: auto;
-}
+/* ---=== CONTACT SECTION ===--- */
 
 #contact {
     border: 1px solid black;
 }
 
 #contact-container {
-    display:flex;
-    justify-content:space-between;
+    display: flex;
+    justify-content: center;
     margin: 0 10px;
 }
 
+#contact-container p {
+    align-self:center;
+    flex-basis:300px;
+}
+
 #contact-form {
-    display:grid;
-    gap:20px;
-    border: 1px solid green;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contact-form-itm {
+    border: none;
+    border-radius: 2%;
+    padding: 5px;
+    min-width:50px;
+}
+
+textarea.contact-form-itm {
+    padding: 10px;
+    font-weight:bold;
+}
+
+button.contact-form-itm {
+    width:70%;
+    align-self: flex-end;
+}
+
+/* ---=== FOOTER SECTION ===--- */
+
+footer {
+    margin-bottom:0;
+    text-align:center;
+    font-size:0.7rem;
 }
 
 /* Mobile Styles */
 @media only screen and (max-width: 400px) {
+    html {
+        font-size: 10px;
+    }
+
     h1 {
         color: yellow !important;
     }
+
+    nav {
+        flex-wrap: wrap;
+    }
+
+    .nav-item {
+        padding: 2.5px;
+    }
+
+    #aboutme-container {
+        grid-template-areas: "table""info";
+    }
+
+    #skills-container {
+        grid-template: repeat(4, 1fr) / 1fr;
+    }
+
 }
 
 /* Tablet Styles */
 @media only screen and (min-width: 401px) and (max-width: 960px) {
+    html {
+        font-size: 13px;
+    }
+
     h1 {
-        color: pink;
+        color: pink !important;
+    }
+
+    nav {
+        flex-wrap: wrap;
+    }
+
+    .nav-item {
+        padding: 5px;
+    }
+
+    #aboutme-container {
+        grid-template-areas: "table""info";
+    }
+
+    #skills-container {
+        grid-template: repeat(2, 1fr) / repeat(2, 1fr);
     }
 }
 

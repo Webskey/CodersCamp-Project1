@@ -7,34 +7,46 @@
     <meta name="description" content="CodersCamp Project 1 - Portfolio Page">
     <meta name="author" content="Łukasz Szpałek">
     <link href="./css/main.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Rubik:400,700&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <div id="main">
-        <nav class="container">
+    <main>
+        <nav id="nav-container">
             <a class="nav-item" href="#header">Home</a>
-            <a class="nav-item" href="#header">About me</a>
-            <a class="nav-item" href="#header">Skills</a>
-            <a class="nav-item" href="#header">Portfolio</a>
-            <a class="nav-item" href="#header">Contact</a>
+            <a class="nav-item" href="#aboutme">About me</a>
+            <a class="nav-item" href="#skills">Skills</a>
+            <a class="nav-item" href="#portfolio">Portfolio</a>
+            <a class="nav-item" href="#contact">Contact</a>
         </nav>
 
-        <header>
-            <h1>Welcome</h1>
+        <header id="header">
+            <h1>Welcome!</h1>
             <h3>My name is Łukasz</h3>
         </header>
 
         <section id="aboutme">
             <h1>About me</h1>
-            <div id="aboutme-container">
-                <div class=aboutme-item>
-                    Name:John Doe<br>
-                    Age:27<br>
-                    Phone: 123-456-678<br>
-                    Mail: myemail@gmail.com<br>
-                </div>
-                <div class="aboutme-item">
+            <t id="aboutme-container">
+                <table class=aboutme-item>
+                    <tr>
+                        <th>Name:</th>
+                        <td>John Doe</td>
+                    </tr>
+                    <tr>
+                        <th>Age:</th>
+                        <td>31</td>
+                    </tr>
+                    <tr>
+                        <th>Phone:</th>
+                        <td>123-456-789</td>
+                    </tr>
+                    <tr>
+                        <th>Mail:</th>
+                        <td>myemail@mail.com</td>
+                    </tr>
+                </table>
+                <p class="aboutme-item">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id magna odio. Suspendisse venenatis,
                     magna non tincidunt porttitor, mi orci suscipit dolor, ut auctor sem eros sit amet tortor. Nulla sed
                     mi tincidunt, consectetur lectus non, semper nunc. Curabitur eleifend risus ac ligula laoreet
@@ -44,69 +56,84 @@
                     Nullam vel orci ac dolor aliquet mattis. Quisque ipsum magna, imperdiet sit amet dignissim in,
                     maximus in felis. Duis pulvinar est odio, a ultricies massa lobortis eu. Proin sollicitudin tellus
                     ac dapibus pellentesque. Aenean.
+                </p>
                 </div>
-            </div>
         </section>
 
         <section id="skills">
             <h1>Skills</h1>
             <div id="skills-container">
-                <div class="skills-item">
+                <figure class="skills-item">
                     <img src="imgs/frontend.png">
-                    <h2>FRONTEND</h2>
-                    <h4>HTML CSS JAVASCRIPT</h4>
-                </div>
-                <div class="skills-item">
+                    <figcaption>FRONTEND</figcaption>
+                    <ul>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JAVASCRIPT</li>
+                    </ul>
+                </figure>
+                <figure class="skills-item">
                     <img src="imgs/backend.png">
-                    <h2>BACKEND</h2>
-                    <h4>JAVA SPRINGBOOT HIBERNATE</h4>
-                </div>
-                <div class="skills-item">
+                    <figcaption>BACKEND</figcaption>
+                    <ul>
+                        <li>JAVA</li>
+                        <li>SPRINGBOOT</li>
+                        <li>HIBERNATE</li>
+                    </ul>
+                </figure>
+                <figure class="skills-item">
                     <img src="imgs/testing.png">
-                    <h2>TESTING</h2>
-                    <h4>JUNIT MOCKITO SELENIUM</h4>
-                </div>
-                <div class="skills-item">
+                    <figcaption>TESTING</figcaption>
+                    <ul>
+                        <li>JUNIT</li>
+                        <li>MOCKITO</li>
+                        <li>SELENIUM</li>
+                    </ul>
+                </figure>
+                <figure class="skills-item">
                     <img src="imgs/other.png">
-                    <h2>OTHER</h2>
-                    <h4>MYSQL LINUX JENKINS</h4>
-                </div>
+                    <figcaption>OTHER</figcaption>
+                    <ul>
+                        <li>MYSQL</li>
+                        <li>LINUX</li>
+                        <li>JENKINS</li>
+                    </ul>
+                </figure>
             </div>
         </section>
 
         <section id="portfolio">
             <h2>Portfolio</h2>
-            <div id="portfolio-container">
-                <div class="portfolio-item"><img class="portfolio-img" src="imgs/portfolio1.jpg"></div>
-                <div class="portfolio-item"><img class="portfolio-img" src="imgs/portfolio2.jpg"></div>
-                <div class="portfolio-item"><img class="portfolio-img" src="imgs/portfolio3.jpg"></div>
-                <div class="portfolio-item"><img class="portfolio-img" src="imgs/portfolio4.jpg"></div>
-                <div class="portfolio-item"><img class="portfolio-img" src="imgs/portfolio5.jpg"></div>
-                <div class="portfolio-item"><img class="portfolio-img" src="imgs/portfolio6.jpg"></div>
-            </div>
+            <figure id="portfolio-container">
+                <img class="portfolio-img" src="imgs/portfolio1.jpg">
+                <img class="portfolio-img" src="imgs/portfolio2.jpg">
+                <img class="portfolio-img" src="imgs/portfolio3.jpg">
+                <img class="portfolio-img" src="imgs/portfolio4.jpg">
+                <img class="portfolio-img" src="imgs/portfolio5.jpg">
+                <img class="portfolio-img" src="imgs/portfolio6.jpg">
+            </figure>
         </section>
 
         <section id="contact">
             <h2>Contact me</h2>
-            <div id="contact-container" >
+            <div id="contact-container">
                 <p id="contact-info">
                     In case you have any question, please feel free to ask me anything.
                     I will answer you as soon as possible!
-                </p>
-                <div class="form-group">
-                <form action="" method="POST" id="contact-form" >
-                    <input class="form-control" type="text" name="name"  placeholder="Name">
-                    <input class="form-control" type="text" name="email"  placeholder="Your Email">
-                    <input class="form-control" type="text" name="subject"  placeholder="Subject">
-                    <textarea class="form-control" name="message" rows="5" cols="30"  placeholder="Message"></textarea>
-                    <button class="form-control btn btn-primary" type="submit" form="contact-form" value="Submit">Send</button>
-                </form>
-                </div>
+                </p>                
+                    <form action="" method="POST" id="contact-form">
+                        <input class="contact-form-itm" type="text" name="name" placeholder="Name">
+                        <input class="contact-form-itm" type="text" name="email" placeholder="Your Email">
+                        <input class="contact-form-itm" type="text" name="subject" placeholder="Subject">
+                        <textarea class="contact-form-itm" name="message" rows="5" cols="20"
+                            placeholder="Message"></textarea>
+                        <button class="contact-form-itm" type="submit" form="contact-form" value="Submit">Send</button>
+                    </form>
             </div>
         </section>
 
         <footer>Copyrights&copy; 2019 Webskey</footer>
-    </div>
+    </main>
 </body>
 
 </html>
