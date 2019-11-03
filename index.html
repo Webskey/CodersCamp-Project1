@@ -3,9 +3,10 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Portfolio Page</title>
+    <title>Portfolio</title>
     <meta name="description" content="CodersCamp Project 1 - Portfolio Page">
-    <meta name="author" content="Łukasz Szpałek">
+    <meta name="author" content="Webskey">
+    <link rel="shortcut icon" type="image/png" href="https://img.icons8.com/nolan/64/000000/monitor.png" />
     <link href="./css/main.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Rubik:400,700&display=swap" rel="stylesheet">
 </head>
@@ -13,22 +14,24 @@
 <body>
     <main>
         <nav id="nav-container">
-            <a class="nav-item" href="#header">Home</a>
-            <a class="nav-item" href="#aboutme">About me</a>
-            <a class="nav-item" href="#skills">Skills</a>
-            <a class="nav-item" href="#portfolio">Portfolio</a>
-            <a class="nav-item" href="#contact">Contact</a>
+            <a href="#header">Home</a>
+            <a href="#aboutme">About me</a>
+            <a href="#skills">Skills</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#contact">Contact</a>
         </nav>
 
         <header id="header">
             <h1>Welcome!</h1>
-            <h3>My name is Łukasz</h3>
+            <h3>My name is John</h3>
         </header>
 
         <section id="aboutme">
             <h2>About me</h2>
-            <t id="aboutme-container">
-                <table class=aboutme-item>
+            <div id="aboutme-container">
+                <img class="aboutme-item" src="imgs/aboutme-s mask.jpg">
+                <img class="aboutme-item" src="imgs/aboutme-l.jpg" alt="photo of me">
+                <table class="aboutme-item">
                     <tr>
                         <th>Name:</th>
                         <td>John Doe</td>
@@ -47,24 +50,21 @@
                     </tr>
                 </table>
                 <p class="aboutme-item">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id magna odio. Suspendisse venenatis,
-                    magna non tincidunt porttitor, mi orci suscipit dolor, ut auctor sem eros sit amet tortor. Nulla sed
-                    mi tincidunt, consectetur lectus non, semper nunc. Curabitur eleifend risus ac ligula laoreet
-                    dapibus. Morbi enim magna, lobortis et est porta, malesuada eleifend magna. Integer vitae malesuada
-                    urna. Nullam at enim vitae felis interdum suscipit.
-
-                    Nullam vel orci ac dolor aliquet mattis. Quisque ipsum magna, imperdiet sit amet dignissim in,
-                    maximus in felis. Duis pulvinar est odio, a ultricies massa lobortis eu. Proin sollicitudin tellus
-                    ac dapibus pellentesque. Aenean.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id magna odio.
+                    Suspendisse venenatis, magna non tincidunt porttitor, mi orci suscipit dolor,
+                    ut auctor sem eros sit amet tortor. Nulla sed mi tincidunt, consectetur lectus
+                    non, semper nunc. Curabitur eleifend risus ac ligula laoreet dapibus. Morbi
+                    enim magna, lobortis et est porta, malesuada eleifend magna. Integer vitae
+                    malesuada urna. Nullam at enim vitae felis interdum suscipit.
                 </p>
-                </div>
+            </div>
         </section>
 
         <section id="skills">
             <h2>Skills</h2>
             <div id="skills-container">
                 <figure class="skills-item">
-                    <img src="imgs/frontend.png">
+                    <img src="imgs/frontend.png" alt="frontend icon">
                     <figcaption>FRONTEND</figcaption>
                     <ul>
                         <li>HTML</li>
@@ -73,7 +73,7 @@
                     </ul>
                 </figure>
                 <figure class="skills-item">
-                    <img src="imgs/backend.png">
+                    <img src="imgs/backend.png" alt="backend icon">
                     <figcaption>BACKEND</figcaption>
                     <ul>
                         <li>JAVA</li>
@@ -82,7 +82,7 @@
                     </ul>
                 </figure>
                 <figure class="skills-item">
-                    <img src="imgs/testing.png">
+                    <img src="imgs/testing.png" alt="testing icon">
                     <figcaption>TESTING</figcaption>
                     <ul>
                         <li>JUNIT</li>
@@ -91,7 +91,7 @@
                     </ul>
                 </figure>
                 <figure class="skills-item">
-                    <img src="imgs/other.png">
+                    <img src="imgs/other.png" alt="other icon">
                     <figcaption>OTHER</figcaption>
                     <ul>
                         <li>MYSQL</li>
@@ -104,31 +104,48 @@
 
         <section id="portfolio">
             <h2>Portfolio</h2>
-            <figure id="portfolio-container">
-                <img class="portfolio-img" src="imgs/portfolio1.jpg">
-                <img class="portfolio-img" src="imgs/portfolio2.jpg">
-                <img class="portfolio-img" src="imgs/portfolio3.jpg">
-                <img class="portfolio-img" src="imgs/portfolio4.jpg">
-                <img class="portfolio-img" src="imgs/portfolio5.jpg">
-                <img class="portfolio-img" src="imgs/portfolio6.jpg">
-            </figure>
+            <div id="portfolio-container">
+                <figure id="portfolio-item1">
+                    <img class="portfolio-img" src="imgs/portfolio1.jpg" alt="project1">
+                    <figcaption>Our Idea App</figcaption>
+                </figure>
+                <figure id="portfolio-item2">
+                    <img class="portfolio-img" src="imgs/portfolio2.jpg" alt="project2">
+                    <figcaption>Portfolio</figcaption>
+                </figure>
+                <figure id="portfolio-item3">
+                    <img class="portfolio-img" src="imgs/portfolio3.jpg" alt="project3">
+                    <figcaption>Weather App</figcaption>
+                </figure>
+                <figure id="portfolio-item4">
+                    <img class="portfolio-img" src="imgs/portfolio4.jpg" alt="project4">
+                    <figcaption>TO-DO List</figcaption>
+                </figure>
+                <figure id="portfolio-item5">
+                    <img class="portfolio-img" src="imgs/portfolio5.jpg" alt="project5">
+                    <figcaption>Cinema App</figcaption>
+                </figure>
+                <figure id="portfolio-item6">
+                    <img class="portfolio-img" src="imgs/portfolio6.jpg" alt="project6">
+                    <figcaption>Codewars</figcaption>
+                </figure>
+            </div>
         </section>
 
         <section id="contact">
             <h2>Contact me</h2>
             <div id="contact-container">
-                <p id="contact-info">
+                <p>
                     In case you have any question, please feel free to ask me anything.
                     <br><br>
                     I will answer you as soon as possible!
                 </p>
                 <form action="" method="POST" id="contact-form">
-                    <input class="contact-form-itm" type="text" name="name" placeholder="Name">
-                    <input class="contact-form-itm" type="text" name="email" placeholder="Email">
-                    <input class="contact-form-itm" type="text" name="subject" placeholder="Subject">
-                    <textarea class="contact-form-itm" name="message" rows="5"
-                        placeholder="Message"></textarea>
-                    <button class="contact-form-itm" type="submit" form="contact-form" value="Submit">Send</button>
+                    <input class="contact-form-item" type="text" name="name" placeholder="Name">
+                    <input class="contact-form-item" type="text" name="email" placeholder="Email">
+                    <input class="contact-form-item" type="text" name="subject" placeholder="Subject">
+                    <textarea class="contact-form-item" name="message" rows="5" placeholder="Message"></textarea>
+                    <button class="contact-form-item" type="submit" form="contact-form" value="Submit">Send</button>
                 </form>
             </div>
         </section>
